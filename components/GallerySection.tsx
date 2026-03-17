@@ -3,54 +3,28 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
 
-const slides = [
-  {
-    src: "https://static.wixstatic.com/media/91ad46_f05f8420d63b4a02bbd317d9046d0388~mv2.png",
-    label: "Piscina",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_9c269b4e941348388fe11e1a298521c3~mv2.png",
-    label: "Deck com acessibilidade",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_593d367fea3848db882c6a89d10e48ab~mv2.png",
-    label: "Sky Bar",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_3e7e39deea7046e892479a5ecfb90076~mv2.jpg",
-    label: "Espaço Luau",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_27ac92455eec428d86ca2599797b51d0~mv2.png",
-    label: "Academia",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_ebe041daad324c48b41f5590a23132b8~mv2.png",
-    label: "Cinema",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_cab072194a9c4f60a2ad7818e6ce61bd~mv2.png",
-    label: "Coworking",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_f35972cbf64b43959089a6729e7cc7a2~mv2.jpg",
-    label: "Sauna",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_c844c7f1a60f45809d25b752c17b0c7e~mv2.jpg",
-    label: "Playground",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_195dab9cf56240eea26ebc60fd3978dc~mv2.jpg",
-    label: "Área Gourmet",
-  },
-  {
-    src: "https://static.wixstatic.com/media/91ad46_b8a01e107cf0413ebf2abc69d0f3a885~mv2.jpg",
-    label: "Salão de Festas",
-  },
+// Gera URL otimizada direto no CDN do Wix (sem passar pelo Next.js image optimizer)
+function wixOpt(url: string, w = 1920, h = 500, q = 75): string {
+  const file = url.split("/media/")[1];
+  return `https://static.wixstatic.com/media/${file}/v1/fill/w_${w},h_${h},al_c,q_${q},enc_auto/${file}`;
+}
+
+const RAW = [
+  { src: "https://static.wixstatic.com/media/91ad46_f05f8420d63b4a02bbd317d9046d0388~mv2.png", label: "Piscina" },
+  { src: "https://static.wixstatic.com/media/91ad46_9c269b4e941348388fe11e1a298521c3~mv2.png", label: "Deck com acessibilidade" },
+  { src: "https://static.wixstatic.com/media/91ad46_593d367fea3848db882c6a89d10e48ab~mv2.png", label: "Sky Bar" },
+  { src: "https://static.wixstatic.com/media/91ad46_3e7e39deea7046e892479a5ecfb90076~mv2.jpg", label: "Espaço Luau" },
+  { src: "https://static.wixstatic.com/media/91ad46_27ac92455eec428d86ca2599797b51d0~mv2.png", label: "Academia" },
+  { src: "https://static.wixstatic.com/media/91ad46_ebe041daad324c48b41f5590a23132b8~mv2.png", label: "Cinema" },
+  { src: "https://static.wixstatic.com/media/91ad46_cab072194a9c4f60a2ad7818e6ce61bd~mv2.png", label: "Coworking" },
+  { src: "https://static.wixstatic.com/media/91ad46_f35972cbf64b43959089a6729e7cc7a2~mv2.jpg", label: "Sauna" },
+  { src: "https://static.wixstatic.com/media/91ad46_c844c7f1a60f45809d25b752c17b0c7e~mv2.jpg", label: "Playground" },
+  { src: "https://static.wixstatic.com/media/91ad46_195dab9cf56240eea26ebc60fd3978dc~mv2.jpg", label: "Área Gourmet" },
+  { src: "https://static.wixstatic.com/media/91ad46_b8a01e107cf0413ebf2abc69d0f3a885~mv2.jpg", label: "Salão de Festas" },
 ];
+
+const slides = RAW.map((s) => ({ ...s, optimized: wixOpt(s.src) }));
 
 export default function GallerySection() {
   const autoplayPlugin = useRef(
@@ -119,15 +93,14 @@ export default function GallerySection() {
                 key={i}
                 className="embla__slide relative flex-[0_0_100%] h-[500px]"
               >
-                <Image
-                  src={slide.src}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={slide.optimized}
                   alt={slide.label}
-                  fill
-                  className="object-cover"
-                  priority={i === 0}
                   loading={i === 0 ? "eager" : "lazy"}
-                  sizes="100vw"
-                  quality={75}
+                  fetchPriority={i === 0 ? "high" : "low"}
+                  decoding={i === 0 ? "sync" : "async"}
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
                 {/* Bottom gradient + label */}
                 <div
