@@ -10,6 +10,7 @@ import AboutSection from "@/components/AboutSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import MobileStickyBar from "@/components/MobileStickyBar";
 
 export default function Home() {
   return (
@@ -43,14 +44,20 @@ export default function Home() {
         <AboutSection />
 
         {/* ── 9. CTA Final ── */}
-        <CTASection />
+        {/* padding-bottom no mobile para não sobrepor a barra fixa */}
+        <div className="pb-20 lg:pb-0">
+          <CTASection />
+        </div>
       </main>
 
       {/* ── Footer ── */}
       <Footer />
 
-      {/* ── WhatsApp Float ── */}
+      {/* ── WhatsApp Float (desktop) ── */}
       <WhatsAppFloat />
+
+      {/* ── Barra fixa mobile ── */}
+      <MobileStickyBar />
     </>
   );
 }

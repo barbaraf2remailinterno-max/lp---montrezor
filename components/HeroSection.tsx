@@ -29,7 +29,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-16 px-5 sm:px-8 lg:px-20 pt-24 pb-10 lg:pt-28 lg:pb-16">
+      <div className="relative z-10 w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-16 px-5 sm:px-8 lg:px-20 pt-24 pb-28 lg:pt-28 lg:pb-16">
         {/* Left block */}
         <div className="max-w-xl w-full text-center lg:text-left">
           {/* Badge */}
@@ -75,10 +75,10 @@ export default function HeroSection() {
           </button>
         </div>
 
-        {/* Right block — Form */}
+        {/* Right block — Form (desktop only) */}
         <div
           id="formulario"
-          className="w-full flex justify-center lg:justify-end"
+          className="hidden lg:flex w-full justify-end"
         >
           <div className="w-full max-w-[420px]">
             <LeadForm />
