@@ -97,12 +97,8 @@ export default function FeatureSection() {
     <section className="bg-[#F5F0E8] py-20 px-8 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
-          <span className="text-xs text-[#E8440A] font-semibold tracking-widest uppercase">
-            Por que o Montrezor
-          </span>
-          <h2 className="text-4xl font-bold text-[#0B1E3E] mt-3 leading-tight">
-            Arquitetura contemporânea. Lazer completo.
-            <br className="hidden md:block" /> Localização privilegiada.
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0B1E3E] leading-tight">
+            Por que o Montrezor?
           </h2>
         </div>
 

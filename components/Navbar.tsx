@@ -14,7 +14,7 @@ export default function Navbar() {
             alt="Evler"
             width={120}
             height={36}
-            className="object-contain h-9 w-auto"
+            className="object-contain h-9 w-auto brightness-0 invert"
             priority
             unoptimized
           />
