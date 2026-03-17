@@ -53,8 +53,8 @@ function OptionButton({
       onClick={onClick}
       className={`w-full h-[52px] rounded-[10px] text-sm font-medium text-left px-4 transition-all duration-150 border ${
         selected
-          ? "border-2 border-[#F5921A] bg-[#FFF3EE] text-[#F5921A] font-semibold"
-          : "border-[1.5px] border-[#E2E8F0] bg-white text-[#1A1A1A] hover:border-[#F5921A50] hover:bg-[#FFF8F6]"
+          ? "border-2 border-[#E8500A] bg-[#FFF3EE] text-[#E8500A] font-semibold"
+          : "border-[1.5px] border-[#E2E8F0] bg-white text-[#1A1A1A] hover:border-[#E8500A50] hover:bg-[#FFF8F6]"
       }`}
     >
       {label}
@@ -282,7 +282,7 @@ export default function LeadForm() {
               setFormData((p) => ({ ...p, nome: e.target.value }))
             }
             placeholder="Ex: João Silva"
-            className={`w-full h-[52px] rounded-[10px] border px-4 text-sm focus:outline-none focus:border-[#F5921A] transition-colors ${
+            className={`w-full h-[52px] rounded-[10px] border px-4 text-sm focus:outline-none focus:border-[#E8500A] transition-colors ${
               errors.nome ? "border-red-400" : "border-[#E2E8F0]"
             }`}
             onKeyDown={(e) => e.key === "Enter" && handleNext()}
@@ -418,7 +418,7 @@ export default function LeadForm() {
                   }))
                 }
                 placeholder="(32) 9XXXX-XXXX"
-                className={`w-full h-[52px] rounded-[10px] border px-4 text-sm focus:outline-none focus:border-[#F5921A] transition-colors ${
+                className={`w-full h-[52px] rounded-[10px] border px-4 text-sm focus:outline-none focus:border-[#E8500A] transition-colors ${
                   errors.telefone ? "border-red-400" : "border-[#E2E8F0]"
                 }`}
               />
@@ -434,7 +434,7 @@ export default function LeadForm() {
                   setFormData((p) => ({ ...p, email: e.target.value }))
                 }
                 placeholder="seu@email.com"
-                className={`w-full h-[52px] rounded-[10px] border px-4 text-sm focus:outline-none focus:border-[#F5921A] transition-colors ${
+                className={`w-full h-[52px] rounded-[10px] border px-4 text-sm focus:outline-none focus:border-[#E8500A] transition-colors ${
                   errors.email ? "border-red-400" : "border-[#E2E8F0]"
                 }`}
               />
@@ -481,7 +481,7 @@ export default function LeadForm() {
         {/* Progress bar */}
         <div className="w-full h-1 bg-[#E2E8F0] rounded-full overflow-hidden">
           <div
-            className="h-full bg-[#F5921A] rounded-full transition-all duration-500 ease-in-out"
+            className="h-full bg-[#E8500A] rounded-full transition-all duration-500 ease-in-out"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -504,7 +504,7 @@ export default function LeadForm() {
           <button
             type="button"
             onClick={handleNext}
-            className="w-full h-[52px] rounded-[10px] bg-[#F5921A] text-white font-semibold text-sm hover:bg-[#D97B12] transition-colors"
+            className="w-full h-[52px] rounded-[10px] bg-[#E8500A] text-white font-semibold text-sm hover:bg-[#C44008] transition-colors"
           >
             {currentStep.btnLabel}
           </button>

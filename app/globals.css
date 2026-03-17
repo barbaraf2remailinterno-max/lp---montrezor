@@ -5,7 +5,7 @@
 :root {
   --font-raleway: "Raleway", sans-serif;
   --font-league-spartan: "League Spartan", sans-serif;
-  --evler-orange: #F5921A;
+  --evler-orange: #E8500A;
 }
 
 /* Força renderização de cor consistente em todos os dispositivos */
@@ -30,6 +30,11 @@ body {
   font-family: var(--font-raleway), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* League Spartan nos títulos — conforme manual de marca */
+h1, h2, h3, h4 {
+  font-family: var(--font-league-spartan), var(--font-raleway), sans-serif;
 }
 
 /* Scroll reveal initial state */
