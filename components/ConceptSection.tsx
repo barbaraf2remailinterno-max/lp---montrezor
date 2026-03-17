@@ -6,7 +6,7 @@ export default function ConceptSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Text */}
         <div>
-          <span className="text-xs text-[#F05A1A] font-semibold tracking-widest uppercase">
+          <span className="text-xs text-[#F5921A] font-semibold tracking-widest uppercase">
             O Conceito
           </span>
           <h2 className="text-4xl font-bold text-[#0B1E3E] leading-tight mt-3 mb-6">

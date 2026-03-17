@@ -33,7 +33,7 @@ export default function HeroSection() {
         {/* Left block */}
         <div className="max-w-xl w-full text-center lg:text-left">
           {/* Badge */}
-          <span className="inline-block bg-[#F05A1A] text-white text-xs font-semibold px-4 py-1.5 rounded-full tracking-widest uppercase">
+          <span className="inline-block bg-[#F5921A] text-white text-xs font-semibold px-4 py-1.5 rounded-full tracking-widest uppercase">
             Obras Iniciadas · São João del-Rei, MG
           </span>
 
@@ -49,7 +49,7 @@ export default function HeroSection() {
           </p>
 
           {/* Decorative line */}
-          <div className="w-16 h-1 bg-[#F05A1A] mt-5 rounded-full mx-auto lg:mx-0" />
+          <div className="w-16 h-1 bg-[#F5921A] mt-5 rounded-full mx-auto lg:mx-0" />
 
           {/* Conditions pills */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-5">
@@ -69,7 +69,7 @@ export default function HeroSection() {
           <button
             type="button"
             onClick={scrollToForm}
-            className="mt-6 lg:mt-8 inline-block bg-[#F05A1A] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-lg font-semibold text-sm lg:text-base hover:bg-[#D44C12] hover:scale-[1.02] transition-all duration-200"
+            className="mt-6 lg:mt-8 inline-block bg-[#F5921A] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-lg font-semibold text-sm lg:text-base hover:bg-[#D97B12] hover:scale-[1.02] transition-all duration-200"
           >
             Quero conhecer o Montrezor
           </button>

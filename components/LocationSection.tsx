@@ -2,7 +2,7 @@
 
 const MapPinIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
-    stroke="#F05A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    stroke="#F5921A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
     className="w-5 h-5 flex-shrink-0">
     <path d="M10 18s-7-5.5-7-10a7 7 0 1114 0c0 4.5-7 10-7 10z" />
     <circle cx="10" cy="8" r="2.5" />
@@ -24,7 +24,7 @@ export default function LocationSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left — Text */}
         <div>
-          <span className="text-xs text-[#F05A1A] font-semibold tracking-widest uppercase">
+          <span className="text-xs text-[#F5921A] font-semibold tracking-widest uppercase">
             Localização
           </span>
           <h2 className="text-4xl font-bold text-[#0B1E3E] leading-tight mt-3 mb-6">
@@ -49,7 +49,7 @@ export default function LocationSection() {
                 <span className="font-medium text-gray-700 text-sm flex-1">
                   {item.label}
                 </span>
-                <span className="ml-auto text-sm text-[#F05A1A] font-semibold">
+                <span className="ml-auto text-sm text-[#F5921A] font-semibold">
                   {item.distance}
                 </span>
               </li>

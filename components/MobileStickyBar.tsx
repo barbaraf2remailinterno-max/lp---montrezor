@@ -12,7 +12,7 @@ export default function MobileStickyBar() {
       <button
         type="button"
         onClick={scrollToForm}
-        className="flex-1 h-[50px] bg-[#F05A1A] text-white font-semibold text-sm rounded-xl hover:bg-[#D44C12] transition-colors"
+        className="flex-1 h-[50px] bg-[#F5921A] text-white font-semibold text-sm rounded-xl hover:bg-[#D97B12] transition-colors"
       >
         Quero garantir minha visita
       </button>

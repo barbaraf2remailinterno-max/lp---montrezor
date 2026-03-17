@@ -5,7 +5,7 @@ export default function ConditionsSection() {
     <section className="bg-[#0B1E3E] py-20 px-8">
       <div className="max-w-5xl mx-auto text-center">
         {/* Label */}
-        <span className="text-xs text-[#F05A1A] font-semibold tracking-widest uppercase">
+        <span className="text-xs text-[#F5921A] font-semibold tracking-widest uppercase">
           Condições Especiais
         </span>
 
@@ -21,7 +21,7 @@ export default function ConditionsSection() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
           {/* Block 1 */}
           <div className="flex flex-col items-center gap-2">
-            <span className="text-7xl font-black text-[#F05A1A] leading-none">
+            <span className="text-7xl font-black text-[#F5921A] leading-none">
               10%
             </span>
             <span className="text-white/70 text-lg">de entrada</span>
@@ -32,7 +32,7 @@ export default function ConditionsSection() {
 
           {/* Block 2 */}
           <div className="flex flex-col items-center gap-2">
-            <span className="text-7xl font-black text-[#F05A1A] leading-none">
+            <span className="text-7xl font-black text-[#F5921A] leading-none">
               60x
             </span>
             <span className="text-white/70 text-lg">parcelas sem juros*</span>
@@ -43,7 +43,7 @@ export default function ConditionsSection() {
 
           {/* Block 3 */}
           <div className="flex flex-col items-center gap-2">
-            <span className="text-7xl font-black text-[#F05A1A] leading-none">
+            <span className="text-7xl font-black text-[#F5921A] leading-none">
               70%
             </span>
             <span className="text-white/70 text-lg">das unidades vendidas</span>
