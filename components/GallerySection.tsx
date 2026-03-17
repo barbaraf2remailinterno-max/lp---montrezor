@@ -73,7 +73,7 @@ export default function GallerySection() {
     <section className="bg-white py-20">
       {/* Header */}
       <div className="text-center px-8 mb-12">
-        <span className="text-xs text-[#E8440A] font-semibold tracking-widest uppercase">
+        <span className="text-xs text-[#F05A1A] font-semibold tracking-widest uppercase">
           Área de Lazer
         </span>
         <h2 className="text-4xl font-bold text-[#0B1E3E] mt-3">
@@ -123,7 +123,7 @@ export default function GallerySection() {
           type="button"
           onClick={scrollPrev}
           aria-label="Anterior"
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E8440A] text-white flex items-center justify-center hover:bg-[#cc3a08] transition-colors shadow-lg z-10"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#F05A1A] text-white flex items-center justify-center hover:bg-[#D44C12] transition-colors shadow-lg z-10"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
@@ -135,7 +135,7 @@ export default function GallerySection() {
           type="button"
           onClick={scrollNext}
           aria-label="Próximo"
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#E8440A] text-white flex items-center justify-center hover:bg-[#cc3a08] transition-colors shadow-lg z-10"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#F05A1A] text-white flex items-center justify-center hover:bg-[#D44C12] transition-colors shadow-lg z-10"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
@@ -154,7 +154,7 @@ export default function GallerySection() {
               aria-label={`Slide ${i + 1}`}
               className={`rounded-full transition-all duration-300 ${
                 i === selectedIndex
-                  ? "w-6 h-2.5 bg-[#E8440A]"
+                  ? "w-6 h-2.5 bg-[#F05A1A]"
                   : "w-2.5 h-2.5 bg-gray-300"
               }`}
             />

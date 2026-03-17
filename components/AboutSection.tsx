@@ -30,7 +30,7 @@ export default function AboutSection() {
             className="object-contain h-9 w-auto"
           />
 
-          <span className="block text-xs text-[#E8440A] font-semibold tracking-widest uppercase mt-6 mb-3">
+          <span className="block text-xs text-[#F05A1A] font-semibold tracking-widest uppercase mt-6 mb-3">
             Quem somos
           </span>
 
@@ -56,7 +56,7 @@ export default function AboutSection() {
           <div className="flex flex-wrap gap-6">
             {values.map((v) => (
               <div key={v} className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[#E8440A] flex-shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-[#F05A1A] flex-shrink-0" />
                 <span className="text-[#0B1E3E] font-semibold text-sm">{v}</span>
               </div>
             ))}

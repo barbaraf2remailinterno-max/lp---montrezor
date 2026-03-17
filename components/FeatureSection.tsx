@@ -2,7 +2,7 @@
 
 const PoolIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-    stroke="#E8440A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    stroke="#F05A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
     className="w-10 h-10">
     <path d="M2 12h20M2 16c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2" />
     <circle cx="8" cy="8" r="2" />
@@ -12,7 +12,7 @@ const PoolIcon = () => (
 
 const BuildingIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-    stroke="#E8440A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    stroke="#F05A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
     className="w-10 h-10">
     <rect x="4" y="2" width="16" height="20" rx="2" />
     <path d="M9 22V12h6v10M9 6h1M14 6h1M9 10h1M14 10h1" />
@@ -21,7 +21,7 @@ const BuildingIcon = () => (
 
 const PinIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-    stroke="#E8440A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    stroke="#F05A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
     className="w-10 h-10">
     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
     <circle cx="12" cy="10" r="3" />
@@ -30,7 +30,7 @@ const PinIcon = () => (
 
 const ShieldIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-    stroke="#E8440A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    stroke="#F05A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
     className="w-10 h-10">
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     <polyline points="9 12 11 14 15 10" />
@@ -39,7 +39,7 @@ const ShieldIcon = () => (
 
 const BalconyIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-    stroke="#E8440A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    stroke="#F05A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
     className="w-10 h-10">
     <rect x="3" y="3" width="18" height="18" rx="2" />
     <path d="M3 9h18M9 9v12M15 9v12" />
@@ -48,7 +48,7 @@ const BalconyIcon = () => (
 
 const KeyIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-    stroke="#E8440A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    stroke="#F05A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
     className="w-10 h-10">
     <circle cx="7.5" cy="15.5" r="5.5" />
     <path d="m21 2-9.6 9.6M15.5 7.5l3 3" />
@@ -108,7 +108,7 @@ export default function FeatureSection() {
               key={i}
               className="
                 bg-white border border-gray-100 rounded-2xl p-7 shadow-sm
-                hover:border-[#E8440A] hover:shadow-lg
+                hover:border-[#F05A1A] hover:shadow-lg
                 transition-all duration-200 cursor-default
               "
             >

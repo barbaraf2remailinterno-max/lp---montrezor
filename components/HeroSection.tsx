@@ -37,7 +37,7 @@ export default function HeroSection() {
         {/* Left block */}
         <div className="max-w-xl w-full">
           {/* Badge */}
-          <span className="inline-block bg-[#E8440A] text-white text-xs font-semibold px-4 py-1.5 rounded-full tracking-widest uppercase">
+          <span className="inline-block bg-[#F05A1A] text-white text-xs font-semibold px-4 py-1.5 rounded-full tracking-widest uppercase">
             Obras Iniciadas · São João del-Rei, MG
           </span>
 
@@ -53,7 +53,7 @@ export default function HeroSection() {
           </p>
 
           {/* Decorative line */}
-          <div className="w-16 h-1 bg-[#E8440A] mt-6 rounded-full" />
+          <div className="w-16 h-1 bg-[#F05A1A] mt-6 rounded-full" />
 
           {/* Conditions pills */}
           <div className="flex flex-wrap gap-3 mt-6">
@@ -74,9 +74,9 @@ export default function HeroSection() {
             type="button"
             onClick={scrollToForm}
             className="
-              mt-8 inline-block bg-[#E8440A] text-white
+              mt-8 inline-block bg-[#F05A1A] text-white
               px-8 py-4 rounded-lg font-semibold text-base
-              hover:bg-[#cc3a08] hover:scale-[1.02]
+              hover:bg-[#D44C12] hover:scale-[1.02]
               transition-all duration-200
             "
           >
