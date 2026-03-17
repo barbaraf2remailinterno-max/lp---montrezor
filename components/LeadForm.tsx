@@ -10,7 +10,6 @@ interface FormData {
   prazo: string;
   financiamento: string;
   faixa_investimento: string;
-  canal_preferido: string;
   telefone: string;
   email: string;
 }
@@ -27,8 +26,7 @@ function formatPhone(value: string): string {
 
 function calcScore(data: FormData): "A - Quente" | "B - Morno" | "C - Frio" {
   const hotPrazo =
-    data.prazo === "O mais rápido possível" ||
-    data.prazo === "Nos próximos 3 meses";
+    data.prazo === "Nos próximos 2 meses";
   const hotFaixa =
     data.faixa_investimento === "Acima de R$ 700 mil" ||
     data.faixa_investimento === "Entre R$ 500 e R$ 700 mil";
@@ -174,7 +172,6 @@ export default function LeadForm() {
     prazo: "",
     financiamento: "",
     faixa_investimento: "",
-    canal_preferido: "",
     telefone: "",
     email: "",
   });
@@ -303,10 +300,9 @@ export default function LeadForm() {
       content: (
         <div className="flex flex-col gap-2.5">
           {[
-            "Moradia própria",
-            "Investimento para renda",
-            "Presente para familiar",
-            "Ainda estou avaliando",
+            "Para moradia",
+            "Para investimento",
+            "Ainda estou decidindo",
           ].map((opt) => (
             <OptionButton
               key={opt}
@@ -325,11 +321,9 @@ export default function LeadForm() {
       content: (
         <div className="flex flex-col gap-2.5">
           {[
-            "3 quartos com suíte master e closet",
             "3 quartos",
             "2 quartos",
             "1 quarto",
-            "Ainda não decidi",
           ].map((opt) => (
             <OptionButton
               key={opt}
@@ -348,8 +342,7 @@ export default function LeadForm() {
       content: (
         <div className="flex flex-col gap-2.5">
           {[
-            "O mais rápido possível",
-            "Nos próximos 3 meses",
+            "Nos próximos 2 meses",
             "Entre 3 e 6 meses",
             "Ainda não sei",
           ].map((opt) => (
@@ -371,7 +364,7 @@ export default function LeadForm() {
         <div className="flex flex-col gap-2.5">
           {[
             "À vista ou parcial à vista",
-            "Financiamento bancário",
+            "Financiamento",
             "FGTS + financiamento",
             "Ainda preciso entender as opções",
           ].map((opt) => (
@@ -410,24 +403,10 @@ export default function LeadForm() {
       showOptions: true,
     },
     7: {
-      question: `Perfeito, ${firstName}! Por onde prefere receber o contato?`,
+      question: `Perfeito, ${firstName}! Informe seus dados para contato.`,
       content: (
         <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-2.5">
-            {[
-              "WhatsApp",
-              "Ligação telefônica",
-              "E-mail",
-            ].map((opt) => (
-              <OptionButton
-                key={opt}
-                label={opt}
-                selected={formData.canal_preferido === opt}
-                onClick={() => selectOption("canal_preferido", opt)}
-              />
-            ))}
-          </div>
-          <div className="mt-2 flex flex-col gap-3">
+          <div className="flex flex-col gap-3">
             <div>
               <input
                 type="tel"
