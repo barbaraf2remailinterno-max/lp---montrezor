@@ -26,7 +26,7 @@ export default function ConceptSection() {
         </div>
 
         {/* Image */}
-        <div className="relative h-[480px] w-full rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative h-[260px] sm:h-[360px] lg:h-[480px] w-full rounded-2xl overflow-hidden shadow-xl">
           <Image
             src="https://static.wixstatic.com/media/91ad46_f05f8420d63b4a02bbd317d9046d0388~mv2.png"
             alt="Conceito Residencial Montrezor"

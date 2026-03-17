@@ -91,7 +91,7 @@ export default function GallerySection() {
             {slides.map((slide, i) => (
               <div
                 key={i}
-                className="embla__slide relative flex-[0_0_100%] h-[500px]"
+                className="embla__slide relative flex-[0_0_100%] h-[320px] sm:h-[420px] lg:h-[500px]"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -123,7 +123,7 @@ export default function GallerySection() {
           type="button"
           onClick={scrollPrev}
           aria-label="Anterior"
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#F05A1A] text-white flex items-center justify-center hover:bg-[#D44C12] transition-colors shadow-lg z-10"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[#F05A1A] text-white flex items-center justify-center hover:bg-[#D44C12] transition-colors shadow-lg z-10"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
@@ -135,7 +135,7 @@ export default function GallerySection() {
           type="button"
           onClick={scrollNext}
           aria-label="Próximo"
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#F05A1A] text-white flex items-center justify-center hover:bg-[#D44C12] transition-colors shadow-lg z-10"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[#F05A1A] text-white flex items-center justify-center hover:bg-[#D44C12] transition-colors shadow-lg z-10"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"

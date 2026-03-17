@@ -58,7 +58,7 @@ export default function LocationSection() {
         </div>
 
         {/* Right — Map */}
-        <div className="w-full h-[480px] rounded-2xl overflow-hidden shadow-xl">
+        <div className="w-full h-[280px] sm:h-[360px] lg:h-[480px] rounded-2xl overflow-hidden shadow-xl">
           <iframe
             src="https://maps.google.com/maps?q=Rua+Presidente+Kennedy,+130,+São+João+del-Rei,+MG&output=embed"
             width="100%"

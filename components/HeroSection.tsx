@@ -22,46 +22,42 @@ export default function HeroSection() {
           sizes="100vw"
           quality={85}
         />
-        {/* Overlay gradient */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(11,30,62,0.92) 45%, rgba(11,30,62,0.3) 100%)",
-          }}
-        />
+        {/* Overlay mobile */}
+        <div className="absolute inset-0 lg:hidden" style={{ background: "rgba(11,30,62,0.85)" }} />
+        {/* Overlay desktop */}
+        <div className="absolute inset-0 hidden lg:block" style={{ background: "linear-gradient(to right, rgba(11,30,62,0.92) 45%, rgba(11,30,62,0.3) 100%)" }} />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16 px-6 lg:px-20 pt-28 pb-16">
+      <div className="relative z-10 w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-16 px-5 sm:px-8 lg:px-20 pt-24 pb-10 lg:pt-28 lg:pb-16">
         {/* Left block */}
-        <div className="max-w-xl w-full">
+        <div className="max-w-xl w-full text-center lg:text-left">
           {/* Badge */}
           <span className="inline-block bg-[#F05A1A] text-white text-xs font-semibold px-4 py-1.5 rounded-full tracking-widest uppercase">
             Obras Iniciadas · São João del-Rei, MG
           </span>
 
           {/* Heading */}
-          <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight mt-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white leading-tight mt-4">
             O charme do Mediterrâneo no coração de São João del-Rei.
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base lg:text-lg text-white/80 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-white/80 mt-3 leading-relaxed">
             Residencial Montrezor — apartamentos de 3 quartos com suíte,
             rooftop e lazer completo.
           </p>
 
           {/* Decorative line */}
-          <div className="w-16 h-1 bg-[#F05A1A] mt-6 rounded-full" />
+          <div className="w-16 h-1 bg-[#F05A1A] mt-5 rounded-full mx-auto lg:mx-0" />
 
           {/* Conditions pills */}
-          <div className="flex flex-wrap gap-3 mt-6">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-5">
             {["10% de entrada", "60x sem juros*", "*com correção INCC"].map(
               (pill) => (
                 <span
                   key={pill}
-                  className="bg-white/10 text-white text-sm px-4 py-2 rounded-lg border border-white/20"
+                  className="bg-white/10 text-white text-xs sm:text-sm px-3 py-1.5 rounded-lg border border-white/20"
                 >
                   {pill}
                 </span>
@@ -73,12 +69,7 @@ export default function HeroSection() {
           <button
             type="button"
             onClick={scrollToForm}
-            className="
-              mt-8 inline-block bg-[#F05A1A] text-white
-              px-8 py-4 rounded-lg font-semibold text-base
-              hover:bg-[#D44C12] hover:scale-[1.02]
-              transition-all duration-200
-            "
+            className="mt-6 lg:mt-8 inline-block bg-[#F05A1A] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-lg font-semibold text-sm lg:text-base hover:bg-[#D44C12] hover:scale-[1.02] transition-all duration-200"
           >
             Quero conhecer o Montrezor
           </button>

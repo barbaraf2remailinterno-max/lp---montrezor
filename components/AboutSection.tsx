@@ -7,7 +7,7 @@ export default function AboutSection() {
     <section className="bg-[#F5F0E8] py-20 px-8 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left — Image */}
-        <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative h-[260px] sm:h-[340px] lg:h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
           <Image
             src="https://static.wixstatic.com/media/91ad46_1d56f92fffe54ada9194f4a787af1e04~mv2.png"
             alt="Equipe Evler"
@@ -27,7 +27,7 @@ export default function AboutSection() {
             alt="Evler"
             width={120}
             height={36}
-            className="object-contain h-9 w-auto"
+            className="object-contain h-9 w-auto brightness-0"
           />
 
           <span className="block text-xs text-[#F05A1A] font-semibold tracking-widest uppercase mt-6 mb-3">
