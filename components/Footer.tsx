@@ -69,7 +69,7 @@ export default function Footer() {
             alt="Evler"
             width={100}
             height={30}
-            className="object-contain h-8 w-auto"
+            className="object-contain h-8 w-auto brightness-0 invert"
             unoptimized
           />
           <p className="text-white/50 text-sm mt-4">
