@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 // ── Social icons ──────────────────────────────────────────────────────────────
@@ -64,13 +63,16 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {/* Col 1 */}
         <div>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="https://static.wixstatic.com/media/e9f121_2b31b52635934c3a8bcd711f775c0af0~mv2.png"
             alt="Evler"
-            width={100}
-            height={30}
-            className="object-contain h-8 w-auto brightness-0 invert"
-            unoptimized
+            style={{
+              height: "30px",
+              width: "auto",
+              objectFit: "contain",
+              filter: "brightness(0) invert(1)",
+            }}
           />
           <p className="text-white/50 text-sm mt-4">
             R. Amaral Gurgel, 150 - Matozinhos

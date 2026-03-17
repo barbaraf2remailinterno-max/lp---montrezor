@@ -5,6 +5,15 @@
 :root {
   --font-raleway: "Raleway", sans-serif;
   --font-league-spartan: "League Spartan", sans-serif;
+  --evler-orange: #F5921A;
+}
+
+/* Força renderização de cor consistente em todos os dispositivos */
+* {
+  -webkit-tap-highlight-color: transparent;
+  color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 * {

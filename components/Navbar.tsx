@@ -1,23 +1,24 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B1E3E] h-[72px] flex items-center">
       <div className="w-full flex items-center justify-between px-6 lg:px-20">
-        {/* Logo */}
+        {/* Logo — img nativo garante filtro CSS em qualquer browser mobile */}
         <Link href="/" aria-label="Evler">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="https://static.wixstatic.com/media/e9f121_2b31b52635934c3a8bcd711f775c0af0~mv2.png"
             alt="Evler"
-            width={120}
             height={36}
-            className="object-contain h-9 w-auto"
-            style={{ filter: "brightness(0) invert(1)" }}
-            priority
-            unoptimized
+            style={{
+              height: "36px",
+              width: "auto",
+              objectFit: "contain",
+              filter: "brightness(0) invert(1)",
+            }}
           />
         </Link>
 
