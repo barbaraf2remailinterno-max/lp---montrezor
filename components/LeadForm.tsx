@@ -237,6 +237,12 @@ export default function LeadForm() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   }
 
+  // Seleciona opção e avança automaticamente após breve delay visual
+  function selectAndAdvance(field: keyof FormData, value: string) {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    setTimeout(() => goTo(step + 1, "forward"), 280);
+  }
+
   // ── Submit ──────────────────────────────────────────────────────────────────
   async function submitForm() {
     const score = calcScore(formData);
@@ -289,7 +295,7 @@ export default function LeadForm() {
           )}
         </div>
       ),
-      btnLabel: "Começar",
+      btnLabel: "Começar" as string | null,
       showOptions: false,
     },
     2: {
@@ -306,12 +312,12 @@ export default function LeadForm() {
               key={opt}
               label={opt}
               selected={formData.objetivo === opt}
-              onClick={() => selectOption("objetivo", opt)}
+              onClick={() => selectAndAdvance("objetivo", opt)}
             />
           ))}
         </div>
       ),
-      btnLabel: "Continuar",
+      btnLabel: null,
       showOptions: true,
     },
     3: {
@@ -329,12 +335,12 @@ export default function LeadForm() {
               key={opt}
               label={opt}
               selected={formData.tipologia === opt}
-              onClick={() => selectOption("tipologia", opt)}
+              onClick={() => selectAndAdvance("tipologia", opt)}
             />
           ))}
         </div>
       ),
-      btnLabel: "Continuar",
+      btnLabel: null,
       showOptions: true,
     },
     4: {
@@ -351,12 +357,12 @@ export default function LeadForm() {
               key={opt}
               label={opt}
               selected={formData.prazo === opt}
-              onClick={() => selectOption("prazo", opt)}
+              onClick={() => selectAndAdvance("prazo", opt)}
             />
           ))}
         </div>
       ),
-      btnLabel: "Continuar",
+      btnLabel: null,
       showOptions: true,
     },
     5: {
@@ -373,12 +379,12 @@ export default function LeadForm() {
               key={opt}
               label={opt}
               selected={formData.financiamento === opt}
-              onClick={() => selectOption("financiamento", opt)}
+              onClick={() => selectAndAdvance("financiamento", opt)}
             />
           ))}
         </div>
       ),
-      btnLabel: "Continuar",
+      btnLabel: null,
       showOptions: true,
     },
     6: {
@@ -395,12 +401,12 @@ export default function LeadForm() {
               key={opt}
               label={opt}
               selected={formData.faixa_investimento === opt}
-              onClick={() => selectOption("faixa_investimento", opt)}
+              onClick={() => selectAndAdvance("faixa_investimento", opt)}
             />
           ))}
         </div>
       ),
-      btnLabel: "Continuar",
+      btnLabel: null,
       showOptions: true,
     },
     7: {
@@ -460,7 +466,7 @@ export default function LeadForm() {
           </div>
         </div>
       ),
-      btnLabel: "Garantir minha visita",
+      btnLabel: "Garantir minha visita" as string | null,
       showOptions: true,
     },
   } as const;
@@ -515,13 +521,15 @@ export default function LeadForm() {
 
       {/* Actions */}
       <div className="mt-5 flex flex-col gap-3">
-        <button
-          type="button"
-          onClick={handleNext}
-          className="w-full h-[52px] rounded-[10px] bg-[#E8440A] text-white font-semibold text-sm hover:bg-[#cc3a08] transition-colors"
-        >
-          {currentStep.btnLabel}
-        </button>
+        {currentStep.btnLabel && (
+          <button
+            type="button"
+            onClick={handleNext}
+            className="w-full h-[52px] rounded-[10px] bg-[#E8440A] text-white font-semibold text-sm hover:bg-[#cc3a08] transition-colors"
+          >
+            {currentStep.btnLabel}
+          </button>
+        )}
         {step > 1 && (
           <button
             type="button"
