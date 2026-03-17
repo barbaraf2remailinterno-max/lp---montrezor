@@ -14,7 +14,7 @@ export default function CTASection() {
     >
       <div className="max-w-2xl mx-auto text-center">
         {/* Badge */}
-        <span className="inline-block bg-[#E8500A] text-white text-xs font-bold tracking-widest px-5 py-2 rounded-full uppercase">
+        <span className="inline-block bg-[#E8440A] text-white text-xs font-bold tracking-widest px-5 py-2 rounded-full uppercase">
           Poucas Unidades Disponíveis
         </span>
 

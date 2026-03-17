@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "evler-navy": "#0B1E3E",
-        "evler-orange": "#E8500A",
+        "evler-orange": "#E8440A",
         "evler-cream": "#F5F0E8",
         "evler-gold": "#C8A96A",
       },
