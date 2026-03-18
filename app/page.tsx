@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import NumbersSection from "@/components/NumbersSection";
 import ConceptSection from "@/components/ConceptSection";
 import GallerySection from "@/components/GallerySection";
-import FeatureSection from "@/components/FeatureSection";
 import ConditionsSection from "@/components/ConditionsSection";
 import SuccessCaseSection from "@/components/SuccessCaseSection";
 import LocationSection from "@/components/LocationSection";
@@ -30,9 +29,6 @@ export default function Home() {
 
         {/* ── 4. Galeria de Lazer ── */}
         <GallerySection />
-
-        {/* ── 5. Diferenciais ── */}
-        <FeatureSection />
 
         {/* ── 6. Condições ── */}
         <ConditionsSection />
