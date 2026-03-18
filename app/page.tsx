@@ -9,7 +9,6 @@ import LocationSection from "@/components/LocationSection";
 import AboutSection from "@/components/AboutSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
 import MobileStickyBar from "@/components/MobileStickyBar";
 
 export default function Home() {
@@ -52,9 +51,6 @@ export default function Home() {
 
       {/* ── Footer ── */}
       <Footer />
-
-      {/* ── WhatsApp Float (desktop) ── */}
-      <WhatsAppFloat />
 
       {/* ── Barra fixa mobile ── */}
       <MobileStickyBar />

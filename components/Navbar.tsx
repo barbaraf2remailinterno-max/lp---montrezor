@@ -25,9 +25,7 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <a
-          href="https://wa.me/5532999798113"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#cta-form"
           className="border border-white text-white text-xs sm:text-sm font-medium px-3 sm:px-5 py-2 rounded-lg hover:bg-white hover:text-[#0B1E3E] transition-all duration-200 whitespace-nowrap"
         >
           Falar com consultor
