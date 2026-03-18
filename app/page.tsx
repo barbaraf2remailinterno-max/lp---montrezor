@@ -5,6 +5,7 @@ import ConceptSection from "@/components/ConceptSection";
 import GallerySection from "@/components/GallerySection";
 import FeatureSection from "@/components/FeatureSection";
 import ConditionsSection from "@/components/ConditionsSection";
+import SuccessCaseSection from "@/components/SuccessCaseSection";
 import LocationSection from "@/components/LocationSection";
 import AboutSection from "@/components/AboutSection";
 import CTASection from "@/components/CTASection";
@@ -36,7 +37,10 @@ export default function Home() {
         {/* ── 6. Condições ── */}
         <ConditionsSection />
 
-        {/* ── 7. São João del-Rei / Localização ── */}
+        {/* ── 7. Case de Sucesso ── */}
+        <SuccessCaseSection />
+
+        {/* ── 8. São João del-Rei / Localização ── */}
         <LocationSection />
 
         {/* ── 8. Sobre a Evler ── */}
