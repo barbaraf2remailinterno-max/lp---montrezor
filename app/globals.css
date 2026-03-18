@@ -57,6 +57,12 @@ h1, h2, h3, h4 {
 .reveal-child-5 { transition-delay: 500ms; }
 .reveal-child-6 { transition-delay: 600ms; }
 
+/* Correção de cor para Android AMOLED (oversaturação desloca laranja para vermelho) */
+@media (max-width: 1023px) {
+  [stroke="#E8440A"] { stroke: #FF7820 !important; }
+  [fill="#E8440A"]   { fill:   #FF7820 !important; }
+}
+
 /* Embla carousel */
 .embla {
   overflow: hidden;

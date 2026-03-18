@@ -72,6 +72,7 @@ export default function Footer() {
               width: "auto",
               objectFit: "contain",
               filter: "brightness(0) invert(1)",
+              WebkitFilter: "brightness(0) invert(1)",
             }}
           />
           <p className="text-white/50 text-sm mt-4">
